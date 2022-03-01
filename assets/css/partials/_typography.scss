@@ -1,0 +1,66 @@
+.highlighted {
+    color: #1A7993;
+}
+
+.heading {
+    font-size: 2.81rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 32px auto;
+}
+
+// hero
+main.hero {
+    .hero-content {
+        @include responsive(l) {
+            max-width: 37.5rem;
+        }
+        .hero-helper {
+            font-size: 1.6rem;
+            font-weight: lighter;
+        }
+        .hero-heading {
+            font-size: 4.0rem;
+            line-height: 1;
+            margin: 8px 0 24px 0;
+            font-weight: bold;
+            @include responsive(l) {
+                font-size: 3.2rem;
+            }
+        }
+    }
+}
+
+// subjects
+.subjects {
+    margin-top: 128px;
+    .subjects-heading {
+        font-size: 2.812rem;
+        line-height: 1;
+        text-align: center;
+        grid-column: span 2;
+        text-transform: uppercase;
+        margin-bottom: $gutter-module;
+    }
+}
+
+// community
+.community {
+    .community-content {
+        @include responsive(l) {
+            width: 100%;
+            font-size: 3.4375rem;
+        }
+    }
+    .community-heading {
+        @include responsive(l) {
+            font-size: 2.4375rem;
+        }
+        font-size: 3.4375rem;
+        line-height: 1.1;
+        text-transform: uppercase;
+    }
+    .community-helper {
+        font-size: 1.1875rem;
+    }
+}

@@ -1,0 +1,182 @@
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    padding: $padding-module;
+    grid-template-columns: 1fr minmax(500px, 1fr);
+    align-items: center;
+    @include responsive(l) {
+        grid-template-columns: auto;
+        padding: 48px 24px;
+    }
+}
+
+.container:not(.social-networks) {
+    margin-top: 128px;
+}
+
+// hero
+main.hero {
+    gap: $gutter-module;
+    align-content: start;
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        .hero-heading {
+            margin: 8px 0px 48px 0;
+        }
+    }
+}
+
+@keyframes colorize {
+    from {
+        fill: #fff;
+    }
+    to {
+        fill: red;
+    }
+}
+
+// subjects
+section.subjects {
+    // subject list
+    @for $i from 1 through 4 {
+        .heart-#{$i} {
+            path {
+                animation: colorize 1s ease-in #{$i + 1}s infinite alternate;
+            }
+        }
+    }
+    .subjects-heading {
+        @include responsive(m) {
+            text-align: left;
+        }
+    }
+    .subject-list {
+        grid-column: span 2;
+        font-size: 1.125rem;
+        display: grid;
+        gap: $gutter-module;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        justify-content: center;
+        @include responsive(m) {
+            grid-template-columns: repeat(2, minmax(50px, 200px));
+            justify-content: start;
+        }
+        .subject-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 48px 24px;
+            // max-width: 200px;
+            width: 100%;
+            background-color: $card-color;
+            transition: .7s ease;
+            span {
+                text-transform: uppercase;
+                margin-top: 32px;
+            }
+            &:hover {
+                background-color: $button-color;
+            }
+        }
+    }
+}
+
+// COMMUNITY
+section.community {
+    background-color: $button-color;
+    width: 100%;
+    .container {
+        width: 100%;
+        padding: 0 32px;
+        gap: $gutter-module;
+        .community-content {
+            display: grid;
+            gap: $gutter-module / 2;
+        }
+        .community-image {
+            align-self: start;
+        }
+        @include responsive(l) {
+            overflow-x: hidden;
+            padding: 8px 16px;
+            .community-image {}
+            .community-image>img {
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+// NEWSLETTER FORM
+.newsletter {
+    gap: $gutter-module;
+    .newsletter-heading {
+        font-size: 2.25rem;
+        grid-column: span 2;
+        justify-self: center;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.2;
+        @include responsive(m) {
+            font-size: 2.0rem;
+        }
+    }
+    .newsletter-form {
+        justify-self: center;
+        grid-column: span 2;
+        max-width: 30%;
+        @include responsive(m) {
+            font-size: 2.0rem;
+            max-width: 100%;
+            &>* {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+        fieldset {
+            border: none;
+        }
+        input {
+            display: block;
+            padding: 5px 10px;
+            height: 50px;
+            color: $placeholder-color;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+            outline: none;
+        }
+    }
+}
+
+::placeholder {
+    color: $placeholder-color;
+}
+
+// SOCIAL NETWORKS
+section.social-networks {
+    gap: $gutter-module / 2;
+    .social-networks-heading {
+        // grid-area: 1 / 1 / 2 / 3;
+        // grid-column: 1 / -1
+        grid-column: span 2;
+        font-size: 1.75rem;
+        justify-self: center;
+    }
+    .social-networks-list {
+        display: grid;
+        grid-auto-flow: column;
+        gap: $gutter-module / 2;
+        justify-self: center;
+        grid-column: span 2;
+        .social-network-icon {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

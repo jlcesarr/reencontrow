@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="author" content="Júlio César">
+    <meta name="robots" content="index, follow">
+    <script src="assets/js/vendor/svg-inject.min.js"></script>
+    <title>Reencontrow</title>
+</head>
+
+
+<body>
+    <h1 class="heading">Reencon<span class="highlighted">trow</span></h1>
+
+    <!-- WIREFRAME HERO -->
+    <main class="hero container">
+        <div class="hero-content">
+            <span class="hero-helper">
+                    Uma plataforma completa de informações...
+                </span>
+            <h2 class="hero-heading">
+                Já são mais de 4mil pessoas conectadas em nossa comunidade
+            </h2>
+            <a href="#subscribe" class="btn btn-primary">Quero Participar</a>
+        </div>
+
+        <picture class="hero-image">
+            <source srcset="assets/images/hero-image.webp" type="image/webp">
+            <img src="assets/images/hero-image.png" alt="Imagem Casal">
+        </picture>
+    </main>
+
+    <!-- ASSUNTOS -->
+    <section class="subjects container">
+        <h3 class="subjects-heading">Principais assuntos abordados</h3>
+        <ul class="subject-list">
+            <li class="subject-item">
+                <img src="assets/svg/heart.svg" class="heart-1" alt="Icone Coração" onload="SVGInject(this)">
+                <span>Relacionamento</span>
+            </li>
+            <li class="subject-item">
+                <img src="assets/svg/heart.svg" class="heart-2" alt="Icone Coração" onload="SVGInject(this)">
+                <span>Sabedoria</span>
+            </li>
+            <li class="subject-item is-active">
+                <img src="assets/svg/heart.svg" class="heart-3" alt="Icone Coração" onload="SVGInject(this)">
+                <span>Amor</span>
+            </li>
+            <li class="subject-item">
+                <img src="assets/svg/heart.svg" class="heart-4" alt="Icone Coração" onload="SVGInject(this)">
+                <span>Amizade</span>
+            </li>
+        </ul>
+    </section>
+
+    <!-- COMUNIDADES -->
+    <section class="community ">
+        <div class="container">
+            <div class="community-content">
+                <h3 class="community-heading">Uma comunidade sobre relacionamento amoroso...</h3>
+                <p class="community-helper">Ensinamentos para você reconquistar o seu amor.<br>Pra você que é acanhado(a)...</p>
+                <a href="#subscribe" class="btn btn-secondary">Quero fazer parte</a>
+            </div>
+
+            <picture class="community-image">
+                <source srcset="assets/images/community-image.webp" type="image/webp">
+                <img src="assets/images/community-image.png" alt="Imagem Casal">
+            </picture>
+        </div>
+    </section>
+
+    <!-- REGISTRO NEWSLETTER/ASSINATURA -->
+    <section id="subscribe" class="newsletter container">
+        <h4 class="newsletter-heading">
+            Receba nossos materiais educativos <br> gratuitamente em seu email
+        </h4>
+        <form action="#" method="POST" class="newsletter-form">
+            <fieldset>
+                <input type="text" name="nome" placeholder="Seu nome" pattern="[a-zA-Z]{3,}" title="Insira um nome válido" aria-label="Nome" required/>
+                <input type="email" name="email" placeholder="Seu e-mail" aria-label="Email" required/>
+            </fieldset>
+            <button class="btn btn-primary btn-form" type="submit">Quero Receber</button>
+        </form>
+
+    </section>
+
+    <!-- REDES SOCIAIS -->
+    <section class="social-networks container">
+        <h5 class="social-networks-heading">Nossas redes sociais</h5>
+        <ul class="social-networks-list">
+            <li class="social-network-item">
+                <a href="#">
+                    <img class="social-network-icon" src="assets/svg/icon.svg" alt="Icone Instagram">
+                </a>
+            </li>
+            <li class="social-network-item">
+                <a href="#">
+                    <img class="social-network-icon" src="assets/svg/icon-1.svg" alt="Icone Twitter">
+
+                </a>
+            </li>
+            <li class="social-network-item">
+                <a href="#">
+                    <img class="social-network-icon" src="assets/svg/icon-2.svg" alt="Icone Facebook">
+                </a>
+            </li>
+        </ul>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+.btn {
+    padding: 15px;
+    background-color: $button-color;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 2.1875rem;
+    display: block;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    @include responsive(m) {
+        font-size: 1.5rem;
+        width: 100%;
+        max-width: 100% !important;
+    }
+    white-space: nowrap;
+    transition: .5s ease;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.btn-primary {
+    max-width: 340px;
+}
+
+.btn-secondary {
+    max-width: 340px;
+    color: $bg-color;
+    background-color: $button-color-secondary;
+}
+
+.btn-form {
+    border: none;
+    width: 100%;
+}
+
+.social-network-item {
+    &>a {
+        transition: transform .4s ease;
+        padding: 10px;
+        &:hover {
+            transform: translateY(-2px);
+        }
+    }
+}
