@@ -1,5 +1,5 @@
 
-# Título do Projeto
+# Reencontrow
 
 Simples Landing Page para app de relacionamentos feita para treinar grid layout (e suas infinitas possibilidades), otimização de imagens e melhoria de SEO.
 
